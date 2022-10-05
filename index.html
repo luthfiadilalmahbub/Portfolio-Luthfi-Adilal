@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Web-Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+  </head>
+  <body>
+
+    <!-- header nav start -->
+
+    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+      <div class="container">
+        <div class="flex items-center justify-between relative">
+          <div class="px-4">
+            <a href="#home" class="font-bold text-2xl bg-gradient-to-r from-primary via-primary2 to-primary3 bg-clip-text text-transparent block py-6 ">Luthfi Adilal</a>
+          </div>
+          <div class="flex items-center px-4">
+            <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
+              <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+              <span class="hamburger-line transition duration-300 ease-in-out"></span>
+              <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+            </button>
+            <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-md rounded-[18px] max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none dark:bg-dark dark:shadow-slate-600 lg:dark:bg-transparent">
+              <ul class="block lg:flex">
+                <li class="group"> 
+                  <a href="#home" class="text-base text-dark py-2 mx-4 flex p-4 rounded-lg group-hover:bg-gradient-to-r from-primary via-primary2 to-primary3 transition duration-500 group-hover:text-white font-medium dark:text-white">Beranda</a>
+                </li>
+                <li class="group"> 
+                  <a href="#about" class="text-base text-dark py-2 mx-4 flex p-4 rounded-lg group-hover:bg-gradient-to-r from-primary via-primary2 to-primary3 transition duration-500 group-hover:text-white font-medium dark:text-white ">Tentang Saya</a>
+                </li>
+                <li class="group"> 
+                  <a href="#portfolio" class="text-base text-dark py-2 mx-4 flex p-4 rounded-lg group-hover:bg-gradient-to-r from-primary via-primary2 to-primary3 transition duration-500 group-hover:text-white font-medium dark:text-white">Portfolio</a>
+                </li>
+                <li class="group"> 
+                  <a href="#skill" class="text-base text-dark py-2 mx-4 flex p-4 rounded-lg group-hover:bg-gradient-to-r from-primary via-primary2 to-primary3 transition duration-500 group-hover:text-white font-medium dark:text-white">Skill</a>
+                </li>
+                <li class="group"> 
+                  <a href="#gallery" class="text-base text-dark py-2 mx-4 flex p-4 rounded-lg group-hover:bg-gradient-to-r from-primary via-primary2 to-primary3 transition duration-500 group-hover:text-white font-medium dark:text-white">Gallery</a>
+                </li>
+                <li class="group">  
+                  <a href="#contact" class="text-base text-dark py-2 mx-4 flex p-4 rounded-lg group-hover:bg-gradient-to-r from-primary via-primary2 to-primary3 transition duration-500 group-hover:text-white font-medium dark:text-white">Kontak</a>
+                </li>
+                <li class="flex items-center pl-8 mt-3 lg:mt-0 xl:mt-0">
+                  <div class="flex">
+                    <span class="mr-2 text-sm text-slate-500">Light</span>
+                    <input type="checkbox" class="hidden" id="dark-toggle">
+                    <label for="dark-toggle">
+                      <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
+                        <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-500 ease-in-out"></div>
+                      </div>
+                    </label>
+                    <span class="ml-2 text-sm text-slate-500">Dark</span>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- header nav start -->
+
+    <!-- hero section start -->
+
+    <section id="home" class="pt-36 dark:bg-dark">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full self-center px-4 lg:w-1/2 ">
+            <h1 class="text-base font-semibold md:text-xl"><span class="bg-gradient-to-r from-primary via-primary2 to-primary3 bg-clip-text  text-transparent">Hallo Semua, Saya</span> <span class="block font-bold text-dark text-4xl mt-1 lg:text-5xl dark:text-white">Luthfi Adilal Mahbub</span></h1>
+            <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl">Saya seorang <span class="text-dark font-semibold dark:text-white">Mahasiswa</span></h2>
+            <p class="font-medium text-secondary mb-10 leading-relaxed">Website Portofolio menggunakan <span class="text-dark font-bold dark:text-white">FramworkCSS</span> dan <span class="text-dark font-bold dark:text-white">Javascript</span></p>
+
+            <a href="#contact" class="text-base font-semibold text-white bg-gradient-to-r from-primary via-primary2 to-primary3 py-3 px-8 rounded-[36px] hover:shadow-lg hover:opacity-40 transition duration-500 ease-in-out ">Hubungi Saya</a>
+          </div>
+          <div class="w-full self-end px-4 lg:w-1/2">
+            <div class="relative mt-10 lg:mt-0 lg:right-0 group lg:left-[70px] xl:w-72 xl:left-[270px] ">
+              <img src="img/foto1.png" width="350" height="450" alt="Luthfi Adilal" class="relative mx-w-full mx-auto xl:scale-110 xl:left-6 group-hover:scale-125 transition duration-500 z-10" />
+              <span class="absolute -bottom-12 top-24 left-1/2 -translate-x-1/2  md:scale-75 lg:scale-90 xl:scale-90 lg:left-60 lg:bottom-44 xl:left-40 group-hover:scale-90 group-hover:rotate-12 transition duration-500 xl:-right-12 "/>
+                <img src="img/object1.svg" alt="object1" class="scale-150">
+              <!-- <svg width="350" height="450" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="xl:w-full xl:scale-150"> 
+                  <path
+                    fill="#0e7490"
+                    d="M37.4,-50.2C52.1,-40.9,70,-34.7,73.8,-23.8C77.7,-12.8,67.5,2.9,60.4,18C53.3,33.2,49.3,47.8,39.8,50.2C30.2,52.5,15.1,42.6,4.6,36.3C-5.9,30,-11.9,27.2,-23.6,25.6C-35.3,23.9,-52.9,23.4,-61.6,15.5C-70.4,7.6,-70.3,-7.6,-62.6,-17C-55,-26.4,-39.6,-29.9,-27.9,-40.2C-16.2,-50.5,-8.1,-67.7,1.6,-69.9C11.4,-72.2,22.8,-59.6,37.4,-50.2Z"
+                    transform="translate(100 100)"
+                  />
+                </svg> -->
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- hero section end -->
+
+    <!-- About Section Start -->
+
+    <section id="about" class="pt-36 pb-32 dark:bg-dark">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full px-4 mb-10 lg:w-1/2">
+            <h4 class="font-bold uppercase text-transparent text-lg mb-3 lg:text-2xl"><span class="bg-gradient-to-r from-primary via-primary2 to-primary3 bg-clip-text">Tentang Saya</span></h4>
+            <h2 class="font-bold text-dark text-3xl mb-5 mx-w-md lg:text-4xl dark:text-white">Sorang Mahasiswa tingkat 2</h2>
+            <p class="font-medium text-base text-secondary mx-w-xl lg:text-lg">Saya Mahasiswa tingkat 2 di Universitas Perjuangan Tasikmalaya saya Mengambil jurusan Teknik Informatika.Saya lulusan SMA N 5 Kota Tasikmalaya.</p>
+          </div>
+          <div class="w-full px-4 lg:w-1/2 ">
+            <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-11 dark:text-white">Mari berteman</h3>
+            <p class="font-medium text-base text-secondary mb-6 lg:text-lg">Jika ingin berteman silahkan klik icon dibawah ini dan kalian bisa ikuti sosial media saya,di dalamnya tidak ada apa-apa dan gak penting juga. </p>
+            <div class="flex items-center">
+
+              <!-- instagram -->
+              <a href="https://instagram.com/luthfi.adilal" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center center border border-slate-300 text-slate-300 hover:border-primary  hover:bg-primary hover:text-white transition duration-500">
+                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+              </a>
+              <!-- instagram -->
+              <a href="https://www.linkedin.com/in/luthfiadilalmahbub" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center center border border-slate-300 text-slate-300 hover:border-primary  hover:bg-primary hover:text-white transition duration-500">
+                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section End -->
+
+    <!-- portfolio section start -->
+
+    <section id="portfolio" class="pt-36 pb-16 bg-slate-200 dark:bg-slate-800">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="mx-w-xl mx-auto text-center mb-16">
+            <h4 class="font-semibold text-lg text-transparent mb-2 lg:text-2xl"><span class="bg-gradient-to-r from-primary via-primary2 to-primary3 bg-clip-text">Portfolio</span></h4>
+            <h2 class="font-bold text-dark text-3xl mb-4 lg:text-4xl dark:text-white">Project Saya</h2>
+            <p class="font-medium text-md text-secondary md:text-lg">Ini adalah Project saya yang saya buat sendiri dan asal-asalan,jika ingin melihat Project saya yang lain bisa Hubungi saya.</p>
+          </div>
+        </div>
+        
+        <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
+          <div class="mb-12 p-4  md:w-1/2">
+            <div class="rounded-[14px] shadow-md overflow-hidden">
+              <img src="img/web pertama3.png" alt="web pertama" class="w-full">
+            </div>
+            <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Web Portfolio Pertama Saya</h3>
+            <p class="font-medium text-base text-secondary">Ini web pertama saya,ini dibuat untuk memenuhi submission akhir di program Beasiswa.</p>
+          </div>
+          <div class="mb-12 p-4  md:w-1/2">
+            <div class="rounded-[14px] shadow-md overflow-hidden">
+              <img src="img/figma fluter.JPG" alt="design app 1" class="w-full">
+            </div>
+            <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Design App</h3>
+            <p class="font-medium text-base text-secondary">Desain ini dibuat karena saya sedang gabut dan dibikin asal-asalan tapi agak jorang.</p>
+          </div>
+          <div class="mb-12 p-4  md:w-1/2">
+            <div class="rounded-[14px] shadow-md overflow-hidden">
+              <img src="img/app ui2 (1).jpg" alt="design app 2" class="w-full">
+            </div>
+            <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Design App</h3>
+            <p class="font-medium text-base text-secondary">Ini adalah desain app yang saya buat sendiri dan dibuat dengan asal-asalan.</p>
+          </div>
+          <div class="mb-12 p-4  md:w-1/2">
+            <div class="rounded-[14px] shadow-md overflow-hidden">
+              <img src="img/uiux25.jpg" alt="web design" class="w-full">
+            </div>
+            <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Web Design</h3>
+            <p class="font-medium text-base text-secondary">Ini adalah web desain yang saya buat menggunakan Figma.Figma ini adalah software untuk membuat desain app/web.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- portoflio section end -->
+
+    <!-- skill section strart -->
+
+    <section id="skill" class="pt-36 pb-32 bg-slate-700 dark:bg-slate-300s">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class=" mx-auto text-center mb-16">
+            <h4 class="font-semibold text-lg text-transparent mb-2 lg:text-2xl"><span class="bg-gradient-to-r from-primary to-primary3 bg-clip-text">Skill</span></h4>
+            <h2 class="font-bold text-white text-3xl mb-4 lg:text-4xl">Skill Saya</h2>
+            <p class="font-medium text-md text-secondary md:text-lg">Skill ini saya dapat di beberapa platform,ada yang di yt ada juga di program Beasiswa.Ini adalah Bahasa Pemrograman yang sudah saya pelajari dan sekarang saya sedang mempelajari Bahasa Pemograman yang lain.</p>
+          </div>
+        </div>
+
+        <div class="w-full px-4">
+          <div class="flex flex-wrap items-center justify-center">
+            <a href="https://html.com" target="_blank" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100 duration-500 lg:mx-6 xl:mx-8">
+              <img src="img/logo html (1).png" alt="html">
+            </a>
+            <a href="https://www.w3schools.com/css/" target="_blank" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100 duration-500 lg:mx-6 xl:mx-8">
+              <img src="img/logo css.png" alt="css">
+            </a>
+            <a href="https://www.w3schools.com/js/" target="_blank" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100 duration-500 lg:mx-6 xl:mx-8">
+              <img src="img/javascript logo.png" alt="javascript">
+            </a>
+            <a href="https://tailwindcss.com/" target="_blank" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100 duration-500 lg:mx-6 xl:mx-8">
+              <img src="img/Tailwind logo.png" alt="tailwindcss">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- skill section end -->
+
+    <!-- Gallery section start -->
+
+
+    <section id="gallery" class="pt-36 pb-32 dark:bg-dark">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="mx-w-xl mx-auto text-center mb-16">
+            <h4 class="font-semibold text-lg text-transparent mb-2 lg:text-2xl"><span class="bg-gradient-to-r from-primary via-primary2 to-primary3 bg-clip-text">Gallery</span></h4>
+            <h2 class="font-bold text-dark text-3xl mb-4 lg:text-4xl dark:text-white">Gallery Saya</h2>
+            <p class="font-medium text-md text-secondary md:text-lg">Selamat datang di galeri saya,ini foto-foto yang menurut saya terbaik dan memiliki cerita,Foto ini diambil dari sejak SMA sampai sekarang.</p>
+          </div>
+        </div>
+
+        <div class="mt-10 p-2 font-inter grid grid-cols-2 gap-2 md:grid-cols-4 md:p-4">
+          <h2 class="text-xl h-15 font-semibold text-secondary md:col-start-4 md:row-start-2 md:flex"><span class="self-center">Welcone to my galery</span></h2>
+          <div class="h-15 text-lg font-bold text-slate md:col-start-2 md:row-start-2 md:flex dark:text-white"><span class="self-end">Luthfi Adilal M</span></div>
+    
+          <div class="h-15 bg-blue-500 aspect-[4/3] rounded-[8px] md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-700">
+            <div style="background-image: url('./img/slank.jpg');" class="w-full h-full bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-700" ></div>
+          </div>
+          <div class="h-15 bg-blue-500 aspect-[4/3] rounded-[8px] md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-700 md:col-start-3">
+            <div style="background-image: url(./img/ngop.jpg);" class="w-full h-full bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-700"></div>
+          </div>
+          <div class="h-15 bg-blue-500 aspect-[4/3] rounded-[8px] md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-700">
+            <div style="background-image: url('./img/wide.jpg');" class="w-full h-full bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-700"></div>
+          </div>
+          <div class="h-15 bg-blue-500 aspect-[4/3] rounded-[8px] md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-700">
+            <div style="background-image: url('./img/fight1.jpg');" class="w-full h-full bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-700"></div>
+          </div>
+          <div class="h-15 bg-blue-500 aspect-[4/3] rounded-[8px] md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-700">
+            <div style="background-image: url('./img/latihan.jpg');" class="w-full h-full bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-700"></div>
+          </div>
+          <div class=" h-15 bg-blue-500 aspect-[4/3] rounded-[8px] md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-700 md:col-start-2">
+            <div style="background-image: url('./img/jungle.jpg');" class="w-full h-full bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-700"></div>
+          </div>
+          <div class="h-15 bg-blue-500 aspect-[4/3] rounded-[8px] md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-700 md:col-start-4">
+            <div style="background-image: url('./img/street.jpg');" class="w-full h-full bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-700"></div>
+          </div>
+          <div class="h-15 bg-blue-500 aspect-[4/3] rounded-[8px] md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-700">
+            <div style="background-image: url('./img/panetean.jpg');" class="w-full h-full bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-700"></div>
+          </div>
+          <div class="h-15 bg-blue-500 aspect-[4/3] rounded-[8px] md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-700 md:col-start-3">
+            <div style="background-image: url('./img/guntur.jpg');" class="w-full h-full bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-700"></div>
+          </div>
+          <div class="h-15 bg-blue-500 aspect-[4/3] rounded-[8px] md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-700 md:col-start-3">
+            <div style="background-image: url('./img/pantai1.jpg');" class="w-full h-full bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-700"></div>
+          </div>
+        </div>
+    
+
+      </div>
+    </section>
+
+    <!-- Gallery section end -->
+
+    <!-- contact section start -->
+
+    <section id="contact" class="pt-12 pb-32 dark:bg-slate-800">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="mx-w-xl mx-auto text-center mb-16">
+            <h4 class="font-semibold text-lg text-transparent mb-2 lg:text-2xl"><span class="bg-gradient-to-r from-primary via-primary2 to-primary3 bg-clip-text">Kontak</span></h4>
+            <h2 class="font-bold text-dark text-3xl mb-4 lg:text-4xl dark:text-white">Hubungi Saya</h2>
+            <p class="font-medium text-md text-secondary md:text-lg">Silahkan jika ada yang mau ditanyakan atau mau mengkritik web saya,nanti saya akan balas pesan kalain melalui email.</p>
+          </div>
+        </div>
+
+        <form name="submit-to-google-sheet"> 
+          <div class="w-full lg:w-2/3 lg:mx-auto relative">
+            <div class="my-alert w-full px-4 py-4 mb-8 h-20 bg-green-300 rounded-[8px] mx-auto sm:p-4 md:p-7 hidden">
+              <div class="w-10 h-10 bg-pink-200 rounded-full flex absolute -top-4 -right-3 cursor-pointer btn-close"><span class="text-xs m-auto">❌</span></div>
+              <p class="text-base "><span class="text-base font-semibold">Terimakasih</span>,pesan anda sudah kami terima.</p>
+            </div>
+            <div class="w-full px-4 mb-8">
+              <label for="name" class="text-base font-semibold text-transparent"><span class="bg-gradient-to-r from-primary via-primary2 to-primary3 bg-clip-text">Nama</span></label>
+              <input type="text" id="name" name="nama" class="w-full bg-slate-200 text-dark p-3 rounded-[8px] focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary transition duration-500">
+            </div>
+            <div class="w-full px-4 mb-8">
+              <label for="email" class="text-base font-semibold text-transparent"><span class="bg-gradient-to-r from-primary via-primary2 to-primary3 bg-clip-text">Email</span></label>
+              <input type="email" id="email" name="email" class="w-full bg-slate-200 text-dark p-3 rounded-[8px] focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary transition duration-500">
+            </div>
+            <div class="w-full px-4 mb-8">
+              <label for="message" class="text-base font-semibold text-transparent"><span class="bg-gradient-to-r from-primary via-primary2 to-primary3 bg-clip-text">Pesan</span></label>
+              <textarea type="text" id="text" name="pesan" class="w-full bg-slate-200 text-dark p-3 h-32 rounded-[8px] focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary transition duration-500"></textarea>
+            </div>
+            <div class="w-full px-4">
+              <button type="submit" class="btn-kirim text-base font-semibold text-white bg-gradient-to-r from-primary via-primary2 to-primary3 py-3 px-8 rounded-full w-full hover:shadow-lg hover:opacity-40 transition duration-500 ease-in-out">Kirim</button>
+            </div>
+          </div>  
+        </form>
+      </div>
+    </section>
+
+    <!-- contact section end -->
+
+    <!-- footer section start -->
+    
+    <footer class="bg-dark pt-24 pb-12 ">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/2">
+            <h2 class="font-bold text-3xl text-white mb-5">Luthfi Adilal Mahbub</h2>
+            <h3 class="font-bold text-2xl mb-2">Hubungi Kami</h3>
+            <p>luthfiadilal01@gmail.com</p>
+            <p>Kota Tasikmalaya</p>
+          </div>
+          <div class="w-full px-4 mb-12 md:w-1/2">
+            <h3 class="font-semibold text-xl text-white mb-5">Tautan</h3>
+            <ul class="text-slate-300">
+              <li>
+                <a href="#home" class="inline-block text-base mb-3 hover:text-primary transition duration-500">Beranda</a>
+              </li>
+              <li>
+                <a href="#about" class="inline-block text-base mb-3 hover:text-primary transition duration-500">Tentang Saya</a>
+              </li>
+              <li>
+                <a href="#portfolio" class="inline-block text-base mb-3 hover:text-primary transition duration-500">Porfolio</a>
+              </li>
+              <li>
+                <a href="#skill" class="inline-block text-base mb-3 hover:text-primary transition duration-500">Skill</a>
+              </li>
+              <li>
+                <a href="#gallery" class="inline-block text-base mb-3 hover:text-primary transition duration-500">Gallery</a>
+              </li>
+              <li>
+                <a href="#contact" class="inline-block text-base mb-3 hover:text-primary transition duration-500">Kontak</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="w-full pt-10 border-t border-slate-700">
+          <div class="flex items-center justify-center mb-5">
+
+            <!-- instagram -->
+            <a href="https://instagram.com/luthfi.adilal" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center center border border-slate-300 text-slate-300 hover:border-primary  hover:bg-primary hover:text-white transition duration-500">
+              <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+            </a>
+            <!-- linkedin -->
+            <a href="https://www.linkedin.com/in/luthfiadilalmahbub" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center center border border-slate-300 text-slate-300 hover:border-primary  hover:bg-primary hover:text-white transition duration-500">
+              <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+          </div>
+          <p class="font-medium text-sm text-slate-500 text-center">Dibuat oleh <a href="https://instagram.com/luthfi.adilal" target="_blank" class="font-bold bg-gradient-to-r from-primary via-primary2 to-primary3 bg-clip-text text-transparent ">Luthfi Adilal Mahbub</a>,menggunakan FrameworkCSS.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- footer section end -->
+
+    <script src="script.js"></script>
+
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwRzZl0gTK5yxPXG9GNwOM2oonWcfmu4fz5cbvofUFRYPdobk3VsRdsopN-LLTOpOJR/exec';
+      const form = document.forms['submit-to-google-sheet'];
+      const btnKirim = document.querySelector('.btn-kirim');
+      const btnClose = document.querySelector('.btn-close');
+      const myAlert = document.querySelector('.my-alert');
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+            //menampilkan alert
+            myAlert.classList.toggle('hidden');
+
+            // reset form
+            form.reset();
+            console.log('Success!', response);
+          })
+          .catch(error => console.error('Error!', error.message))
+      });
+
+      btnClose.addEventListener('click', function(){
+        myAlert.classList.add('hidden');
+      })
+    </script>
+
+
+  </body>
+</html>
